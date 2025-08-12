@@ -1,6 +1,22 @@
 [package]
-name = "hello_rust"
+name = "zipper"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+description = "A minimal ZIP create/extract CLI tool"
+license = "MIT"
+repository = "https://github.com/yourusername/zipper"  # Optional: add your repo
+authors = ["Your Name <you@example.com>"]
 
 [dependencies]
+# For ZIP creation and extraction
+zip = { version = "0.6", default-features = false, features = ["deflate"] }
+
+# For CLI parsing
+clap = { version = "4.5", features = ["derive"] }
+
+[profile.release]
+# Optimize for smallest binary size
+opt-level = 'z'        # Optimize for size
+lto = true             # Enable Link Time Optimization
+strip = true           # Remove debug symbols
+overflow-checks = true # Keep safety without big cost
