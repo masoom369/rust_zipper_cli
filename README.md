@@ -17,7 +17,7 @@ A fast, lightweight command-line ZIP archiver written in Rust. Create and extrac
 1. Clone the repository:
 ```bash
 git clone https://github.com/masoom369/rust_zipper_cli.git
-cd zipper
+cd rust_zipper_cli
 ```
 
 2. Build the project:
@@ -25,7 +25,7 @@ cd zipper
 cargo build --release
 ```
 
-3. The binary will be available at `target/release/rust_zipper_cli`
+3. The binary will be available at `target/release/zipper`
 
 ### Using Cargo
 
